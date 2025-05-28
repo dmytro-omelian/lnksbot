@@ -13,7 +13,12 @@ async function bootstrap() {
   // Serve static files
   app.useStaticAssets(join(__dirname, '..', 'public'));
   
-  await app.listen(process.env.PORT ?? 3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  // Enable CORS for Vercel deployment
+  app.enableCors();
+  
+  // Use environment port or default to 3000
+  const port = process.env.PORT || 3000;
+  await app.listen(port);
+  console.log(`Application is running on port: ${port}`);
 }
 bootstrap();

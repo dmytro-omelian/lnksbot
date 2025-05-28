@@ -8,8 +8,10 @@ async function bootstrap() {
     app.setViewEngine('hbs');
     app.setBaseViewsDir((0, path_1.join)(__dirname, '..', 'views'));
     app.useStaticAssets((0, path_1.join)(__dirname, '..', 'public'));
-    await app.listen(process.env.PORT ?? 3000);
-    console.log(`Application is running on: ${await app.getUrl()}`);
+    app.enableCors();
+    const port = process.env.PORT || 3000;
+    await app.listen(port);
+    console.log(`Application is running on port: ${port}`);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

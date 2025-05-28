@@ -8,6 +8,12 @@ import { join } from 'path';
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
+      serveRoot: '/',
+      serveStaticOptions: {
+        cacheControl: true,
+        maxAge: 86400,
+        index: false,
+      },
       exclude: ['/api*'],
     }),
   ],
