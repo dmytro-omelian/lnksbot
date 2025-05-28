@@ -46,6 +46,8 @@ module.exports = (req, res) => {
     page = 'terms';
   } else if (url === '/privacy') {
     page = 'privacy';
+  } else if (url === '/refund') {
+    page = 'refund';
   } else if (url === '/blog') {
     page = 'blog';
   } else if (url === '/careers') {
@@ -85,6 +87,8 @@ function getTitle(page) {
       return 'Terms of Service - lnksbot';
     case 'privacy':
       return 'Privacy Policy - lnksbot';
+    case 'refund':
+      return 'Refund Policy - lnksbot';
     case 'blog':
       return 'Blog - lnksbot';
     case 'careers':
@@ -106,6 +110,8 @@ function getDescription(page) {
       return 'Terms and conditions for using lnksbot services';
     case 'privacy':
       return 'How lnksbot collects, uses, and protects your information';
+    case 'refund':
+      return 'Our refund policy and procedures for subscription cancellations';
     case 'blog':
       return 'News, tips, and insights from the lnksbot team';
     case 'careers':
