@@ -21,4 +21,22 @@ async function bootstrap() {
   await app.listen(port);
   console.log(`Application is running on port: ${port}`);
 }
+
+// For Vercel serverless deployment
+export default async function handler(req: any, res: any) {
+  const server = await NestFactory.create<NestExpressApplication>(AppModule);
+  server.setViewEngine('hbs');
+  server.setBaseViewsDir(join(__dirname, '..', 'views'));
+  server.useStaticAssets(join(__dirname, '..', 'public'));
+  server.enableCors();
+  
+  // Initialize the server
+  await server.init();
+  
+  // Get the HTTP adapter
+  const instance = server.getHttpAdapter().getInstance();
+  
+  // Forward the request to the NestJS instance
+  return instance(req, res);
+}
 bootstrap();
