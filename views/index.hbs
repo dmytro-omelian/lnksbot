@@ -26,7 +26,11 @@
           </ul>
         </nav>
         <div class='cta-button-small'>
-          <a href='https://app.lnksbot.com' class='button-secondary'>Sign up</a>
+          <a
+            href='https://ai-calendar.com/checkout/pro_01k0gh96p391gap05kjt04q83q'
+            target='_blank'
+            class='button-secondary'
+          >Sign up</a>
         </div>
       </header>
 
@@ -37,8 +41,11 @@
             <p class='subtitle'>Just add links, receive your daily dose of
               insights. Simple, personalized, and designed for modern readers.</p>
             <div class='cta-buttons'>
-              <a href='https://app.lnksbot.com' class='button-primary'>Try for
-                free</a>
+              <a
+                href='https://ai-calendar.com/checkout/pro_01k0gh96p391gap05kjt04q83q'
+                target='_blank'
+                class='button-primary'
+              >Buy Now</a>
               <a href='#demo' class='button-text'>See how it works
                 <span class='arrow'>→</span></a>
             </div>
@@ -281,49 +288,25 @@
             <p>Simple, transparent pricing for everyone</p>
           </div>
           <div class='pricing-cards'>
-            <div class='pricing-card'>
-              <div class='pricing-header'>
-                <h3>Free</h3>
-                <div class='price'>$0<span>/month</span></div>
-              </div>
-              <ul class='pricing-features'>
-                <li>Up to 5 links to save daily</li>
-                <li>Basic AI summaries</li>
-                <li>Up to 10 newsletter per month</li>
-                <li>Support</li>
-              </ul>
-              <a href='https://app.lnksbot.com' class='button-secondary'>Try for
-                free</a>
-            </div>
-            <div class='pricing-card featured'>
-              <div class='pricing-badge'>Popular</div>
+            <div
+              class='pricing-card featured'
+              style='margin: 0 auto; max-width: 350px;'
+            >
+              <div class='pricing-badge'>Premium</div>
               <div class='pricing-header'>
                 <h3>Pro</h3>
-                <div class='price'>$9<span>/month</span></div>
+                <div class='price'>$4.99<span>/month</span></div>
               </div>
               <ul class='pricing-features'>
-                <li>Up to 10 links to save daily</li>
-                <li>(No more than 100 links per month)</li>
-                <li>Advanced summaries</li>
-                <li>Daily newsletter</li>
-                <li>Support</li>
+                <li>Up to 100 generated newsletters monthly</li>
+                <li>Up to 1000 links backlog</li>
+                <li>Advanced AI summaries</li>
               </ul>
-              <a href='https://app.lnksbot.com' class='button-primary'>Try for
-                free</a>
-            </div>
-            <div class='pricing-card'>
-              <div class='pricing-header'>
-                <h3>Pro+</h3>
-                <div class='price'>$20<span>/month</span></div>
-              </div>
-              <ul class='pricing-features'>
-                <li>Unlimited links</li>
-                <li>Advanced summaries</li>
-                <li>Up to 3 newsletter daily</li>
-                <li>Priority support</li>
-              </ul>
-              <a href='https://app.lnksbot.com' class='button-secondary'>Try for
-                free</a>
+              <a
+                href='https://ai-calendar.com/checkout/pro_01k0gh96p391gap05kjt04q83q'
+                target='_blank'
+                class='button-primary'
+              >Buy Now</a>
             </div>
           </div>
         </section>
@@ -334,9 +317,10 @@
             <p>Join readers who are getting smarter every day with lnksbot.</p>
             <div class='cta-buttons-container'>
               <a
-                href='https://app.lnksbot.com'
+                href='https://ai-calendar.com/checkout/pro_01k0gh96p391gap05kjt04q83q'
+                target='_blank'
                 class='button-primary cta-main-button'
-              >Try for free</a>
+              >Buy Now</a>
             </div>
           </div>
         </section>
@@ -448,5 +432,16 @@
       </footer>
     </div>
     <script src='/js/main.js'></script>
+    <script src='https://cdn.paddle.com/paddle/paddle.js'></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () { // Initialize
+      Paddle Paddle.Environment.set('sandbox'); Paddle.Setup({ token:
+      'test_e018a4360a7ded17fbc8ae2567b' }); // Set up buy button const
+      buyButton = document.getElementById('buy-button'); if (buyButton) {
+      buyButton.addEventListener('click', function() { Paddle.Checkout.open({
+      items: [{ priceId: 'pro_01k0gh96p391gap05kjt04q83q', quantity: 1 }],
+      successUrl: window.location.origin + '/success', displayMode: 'overlay'
+      }); }); } });
+    </script>
   </body>
 </html>
