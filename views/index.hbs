@@ -262,8 +262,12 @@
             <div class='step'>
               <div class='step-number'>1</div>
               <h3>Add links</h3>
-              <p>Save articles, blog posts, and web pages with our browser
-                extension, mobile app, or by email.</p>
+              <p>Save articles, blog posts, and web pages with our
+                <a
+                  href='https://chromewebstore.google.com/detail/dffejglpkijjkdbndhcobjldogmjlnhl?utm_source=item-share-cb'
+                  target='_blank'
+                  class='extension-link'
+                >browser extension</a>, mobile app, or by email.</p>
             </div>
             <div class='step-arrow'>→</div>
             <div class='step'>
@@ -307,6 +311,16 @@
                 target='_blank'
                 class='button-primary'
               >Buy Now</a>
+              <div class='extension-cta'>
+                <a
+                  href='https://chromewebstore.google.com/detail/dffejglpkijjkdbndhcobjldogmjlnhl?utm_source=item-share-cb'
+                  target='_blank'
+                  class='button-text'
+                >
+                  Get Chrome Extension
+                  <span class='arrow'>→</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -337,6 +351,10 @@
               <ul>
                 <li><a href='#features'>Features</a></li>
                 <li><a href='#pricing'>Pricing</a></li>
+                <li><a
+                    href='https://chromewebstore.google.com/detail/dffejglpkijjkdbndhcobjldogmjlnhl?utm_source=item-share-cb'
+                    target='_blank'
+                  >Chrome Extension</a></li>
                 <li><a href='#'>FAQ</a></li>
               </ul>
             </div>
@@ -432,6 +450,21 @@
       </footer>
     </div>
     <script src='/js/main.js'></script>
+    <style>
+      .extension-link {
+        color: var(--color-primary);
+        text-decoration: underline;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+      .extension-link:hover {
+        color: var(--color-primary-dark);
+      }
+      .extension-cta {
+        margin-top: 1rem;
+        text-align: center;
+      }
+    </style>
     <script src='https://cdn.paddle.com/paddle/paddle.js'></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () { // Initialize
